@@ -6,10 +6,10 @@ router.post('/', function(req, res){
 	console.log('route hit')
 	var mail = req.body;
 	// console.log(config.api_key.key);
-	
+	//dankaypc@qwestoffice.net
 	var sendgrid  = require('sendgrid')(config.api_key.key);
 		sendgrid.send({
-		  to:       'dankaypc@qwestoffice.net',
+		  to:       'grossman.stuart1@gmail.com',
 		  from:     req.body.email,
 		  subject:  req.body.subject,
 		  text:     req.body.message
