@@ -8,7 +8,8 @@ router.post('/', function(req, res){
 	var mail = req.body;
 	// console.log(config.api_key.key);
 	//dankaypc@qwestoffice.net
-	var sendgrid  = require('sendgrid')(env.API_KEY);
+	var api_key = process.env.API_KEY
+	var sendgrid  = require('sendgrid')(api_key);
 		sendgrid.send({
 		  to:       'grossman.stuart1@gmail.com',
 		  from:     req.body.email,
