@@ -5,6 +5,17 @@ var app = express();
 var nodemailer = require('nodemailer');
 var port = process.env.PORT || 3000;
 
+// function moduleAvailable(name) {
+//   try {
+//     require.resolve(name);
+//     return true;
+//   } catch(e){}
+//   return false;
+// }
+
+// if (moduleAvailable('./env.js')) {
+//   var env = require('./env.js');
+// } 
 
 app.set('views', path.join(__dirname, 'views'));
 //set the view engine that will render HTML from the server to the client

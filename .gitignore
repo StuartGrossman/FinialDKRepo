@@ -1,4 +1,5 @@
 .DS_Store
-config.json
+
 push-server.json
 
+env.js

@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var config = require('../config.json');
+var env = require('../env.js');
+
 
 router.post('/', function(req, res){
 	console.log('route hit')
 	var mail = req.body;
 	// console.log(config.api_key.key);
 	//dankaypc@qwestoffice.net
-	var sendgrid  = require('sendgrid')(config.api_key.key);
+	var sendgrid  = require('sendgrid')(env.API_KEY);
 		sendgrid.send({
 		  to:       'grossman.stuart1@gmail.com',
 		  from:     req.body.email,
