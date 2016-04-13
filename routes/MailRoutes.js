@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var env = require('../env.js');
+
 
 
 router.post('/', function(req, res){
